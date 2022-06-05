@@ -1,7 +1,22 @@
 <?php include "dbinfo.inc"; ?>
 <html>
 <body>
-<h1>Sample page</h1>
+<h1>Develop infrastructure in AWS, using IaC approach with Terraform</h1>
+  
+  
+ <h2> Services: </h2>
+
+ <h3>RDS</h3>
+ <h3>ASG
+ <h3>ELB
+ <h3>SG
+
+ <h2>Requirements: </h2>
+   
+ <h3>Modules </h3>
+ <h3>Remote state file </h3>
+ <h3>Multi-environment </h3>
+  
 <?php
 
   /* Connect to MySQL and select the database. */
