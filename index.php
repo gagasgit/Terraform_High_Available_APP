@@ -1,22 +1,26 @@
 <?php include "dbinfo.inc"; ?>
 <html>
 <body>
-<h1>Develop infrastructure in AWS, using IaC approach with Terraform</h1>
-  
-  
- <h2> Services: </h2>
-
- <h3>RDS</h3>
- <h3>ASG
- <h3>ELB
- <h3>SG
-
- <h2>Requirements: </h2>
-   
- <h3>Modules </h3>
- <h3>Remote state file </h3>
- <h3>Multi-environment </h3>
-  
+<h3 style="text-align: center;"><span style="color: #008000;">Develop infrastructure in AWS, using IaC approach with Terraform</span></h3>
+<center><table style="width: 70%; border-collapse: collapse;" border="0" cellspacing="0" cellpadding="20">
+<tbody>
+<tr>
+<td style="width: 50%;">
+<h3><span style="color: #ff6600;">Services:</span></h3>
+<h4><span style="color: #333333;">RDS</span></h4>
+<h4><span style="color: #333333;">ASG</span></h4>
+<h4><span style="color: #333333;">ELB</span></h4>
+<h4><span style="color: #333333;">SG</span></h4>
+</td>
+<td style="width: 50%;">
+<h3><span style="color: #003366;">Requirements:</span></h3>
+<h4><span style="color: #333333;">Modules</span></h4>
+<h4><span style="color: #333333;">Remote state file</span></h4>
+<h4><span style="color: #333333;">Multi-environment</span></h4>
+</td>
+</tr>
+</tbody>
+  </table></center>
 <?php
 
   /* Connect to MySQL and select the database. */
