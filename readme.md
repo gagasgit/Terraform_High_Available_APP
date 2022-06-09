@@ -1,0 +1,43 @@
+Create New S3 Bucket
+create unique Name
+Choose Region
+next > next > create bucket
+Go Properties -> Vrsioning -> enable Versioning -> save
+Go Properties -> Default encryption -> e.g. SSE-S3 -> save
+
+copy name and region
+
+(https://awsregion.info/)
+
+terraform {
+  backend "s3" {
+    bucket = "bucket-name------------"
+    key    = "dev/ha/terraform.tfstate"
+    region = "us-east-1"
+  }
+}
+
+### 1) Method
+Run apply command with aditional parameters 
+terraform apply -var="region=us-east-1" -var="ec2_instance_type=t2.micro"
+
+### 2) Method
+Declare Variable Values in termainal session
+
+export TF_VAR_region=us-east-1
+echo $TF_VAR_region
+
+export TF_VAR_ec2_instance_type=t2.micro"
+echo $TF_VAR_ec2_instance_type
+
+env | grep TF_VAR
+
+
+unset TF_VAR_region
+unset TF_VAR_ec2_instance_type
+
+
+### 3) Method
+Using .tfvars files
+
+terraform apply -var-file="dev.tfvars"
