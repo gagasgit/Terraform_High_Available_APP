@@ -11,7 +11,7 @@ copy name and region
 
 terraform {
   backend "s3" {
-    bucket = "bucket-name------------"
+    bucket = "bucket-name-3213289798d"
     key    = "dev/ha/terraform.tfstate"
     region = "us-east-1"
   }

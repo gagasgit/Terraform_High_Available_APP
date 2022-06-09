@@ -1,0 +1,22 @@
+region               = "us-east-1"
+aws_ami              = ["amzn2-ami-kernel-*-x86_64-gp2"]
+ec2_instance_type    = "t2.micro"
+web_ports            = ["80", "8080", "443"]
+db_port              = "3306"
+passname             = "nanada"
+rds_instance_type    = "db.t3.micro"
+database_name        = "webappdb"
+database_user        = "webapp"
+launch_config_name   = "launch_config_ec2"
+vpc_cidr             = "10.0.0.0/16"
+public_subnet_cidrs  = ["10.0.21.0/24", "10.0.22.0/24", "10.0.23.0/24"]
+private_subnet_cidrs = ["10.0.31.0/24", "10.0.32.0/24", "10.0.33.0/24"]
+cidr_blocks_all      = ["0.0.0.0/0"]
+db_sg                = "Database_SG"
+min_size             = "5"
+max_size             = "5"
+desired_capacity     = "5"
+common_tags = {
+    Project          = "HA_WE_APP_dev"
+    Environment      = "Development"
+}

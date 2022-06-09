@@ -1,0 +1,22 @@
+region               = "us-west-2"
+aws_ami              = ["amzn2-ami-kernel-*-x86_64-gp2"]
+ec2_instance_type    = "t3.micro"
+web_ports            = ["80", "443"]
+db_port              = "3306"
+passname             = "nanada"
+rds_instance_type    = "db.t3.micro"
+database_name        = "webappdb"
+database_user        = "webapp"
+launch_config_name   = "launch_config_ec2"
+vpc_cidr             = "10.0.0.0/16"
+public_subnet_cidrs  = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
+private_subnet_cidrs = ["10.0.11.0/24", "10.0.12.0/24", "10.0.13.0/24"]
+cidr_blocks_all      = ["0.0.0.0/0"]
+db_sg                = "Database_SG"
+min_size             = "2"
+max_size             = "2"
+desired_capacity     = "2"
+common_tags = {
+    Project          = "HA_WE_APP_staging"
+    Environment      = "Staging"
+}
